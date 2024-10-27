@@ -52,7 +52,7 @@ yarn test:watch
 
 Run Cypress Tests
 ```
-yarn cypress:run
+yarn run cypress
 ```
 
 ## 🤔 Do you have npm installed?
@@ -86,6 +86,59 @@ Run Cypress Tests
 ```
 npm run cypress
 ```
+
+## Issues with local set up/no vscode installed - try GitHub Codespaces
+
+Navigate to Your GitHub Repository
+```
+https://github.com/miahbates/fac-testing-workshop-2024
+```
+
+Launch GitHub Codespaces
+Click the green Code button near the top of the repository page.
+Select the Codespaces tab.
+If you don’t have an existing Codespace for this repository, click Create codespace on main (or your preferred branch).
+
+Run development server
+```
+yarn dev
+# or
+npm run dev
+```
+
+Run jest tests
+```
+yarn test
+# or
+npm test
+```
+
+or
+
+```
+yarn test:watch
+# or
+npm run test:watch
+```
+
+Run Cypress Tests
+GitHub Codespaces currently does not support running GUI applications, which is why yarn cypress open (which opens the Cypress Test Runner UI) doesn’t work. Since Codespaces runs in a headless environment, you’ll need to use the headless mode for Cypress testing. In a headless environment like GitHub Codespaces, Cypress relies on a virtual framebuffer (like Xvfb) to simulate a display for running tests. 
+
+To streamline testing, add a headless script to your package.json
+```
+cypress:headless": "cypress run --headless
+```
+
+Since Codespaces doesn’t have Xvfb installed by default, you need to add it.
+Here’s how to set up Xvfb in Codespaces to run Cypress tests in headless mode
+```
+sudo apt-get update
+sudo apt-get install -y xvfb
+```
+
+This will only run tests in the terminal not the cypress browser UI
+```yarn cypress:headless```
+
 
 ## Common errors:
 
