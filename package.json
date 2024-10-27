@@ -12,13 +12,11 @@
     "cypress": "cypress open"
   },
   "dependencies": {
-    "@mantine/core": "^7.13.4",
-    "@mantine/hooks": "^7.13.4",
     "dayjs": "^1.11.13",
     "mockdate": "^3.0.5",
-    "next": "15.0.1",
-    "react": "19.0.0-rc-69d4b800-20241021",
-    "react-dom": "19.0.0-rc-69d4b800-20241021"
+    "next": "12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
