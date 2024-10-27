@@ -12,10 +12,12 @@
 // 4. Checks that the submit button remains disabled until all form fields are filled. Once filled, the button should be enabled.
 // Form Submission Adds New Item to List:
 
-// 5.Fills out the form, submits it, and then checks that a new entry is added to the list with the expected values.
+// 5. Fills out the form, submits it, and then checks that a new entry is added to the list with the expected values.
 // Check Back Link Navigation:
 
-// 6.Ensures the "Back to Home" link is present and has the correct href attribute for navigation.
+// 6. Ensures the "Back to Home" link is present and has the correct href attribute for navigation.
+
+// 7. Write a test to check the prop passed in displays a welcome message + the name
 
 describe("ExerciseTwoComponent", () => {
   it("Write your tests here", () => {});

@@ -24,7 +24,8 @@ const courseOptions = [
   { value: "course2", label: "Course 2" },
 ];
 
-const ExerciseTwoComponent = () => {
+const ExerciseTwoComponent = (props) => {
+  const { randomName } = props;
   const [formData, setFormData] = useState({ name: "", email: "", course: "" });
   const [submittedItems, setSubmittedItems] = useState([]); // List of submitted items
 
@@ -52,6 +53,7 @@ const ExerciseTwoComponent = () => {
   return (
     <div className="container">
       <h1 className="title">Exercise Two</h1>
+      <h2>Welcome {randomName}👋</h2>
 
       <form className="form" onSubmit={handleSubmit}>
         {formFields.map((field) => (

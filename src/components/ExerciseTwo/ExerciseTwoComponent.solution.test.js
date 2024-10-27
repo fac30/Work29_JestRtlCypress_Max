@@ -1,10 +1,12 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import ExerciseTwoComponent from "./ExerciseTwoComponent";
 
+const mockRandomName = "Ms Elizabeth Gray";
+
 describe("ExerciseTwoComponent", () => {
   // 1. Render Title and Form Elements
   it("should render the title, form fields, and dropdown", () => {
-    render(<ExerciseTwoComponent />);
+    render(<ExerciseTwoComponent randomName={mockRandomName} />);
     expect(
       screen.getByRole("heading", { name: /exercise two/i })
     ).toBeInTheDocument();
@@ -15,7 +17,7 @@ describe("ExerciseTwoComponent", () => {
 
   // 2. Render Static List Items
   it("should render the hardcoded list items", () => {
-    render(<ExerciseTwoComponent />);
+    render(<ExerciseTwoComponent randomName={mockRandomName} />);
     expect(
       screen.getByText(
         /john doe - testemail@test.com - first hard coded list item/i
@@ -30,7 +32,7 @@ describe("ExerciseTwoComponent", () => {
 
   // 3. Form Input and Dropdown Functionality
   it("should allow input into name and email fields and selection from the course dropdown", () => {
-    render(<ExerciseTwoComponent />);
+    render(<ExerciseTwoComponent randomName={mockRandomName} />);
 
     // Name Input
     const nameInput = screen.getByLabelText(/your name/i);
@@ -50,7 +52,7 @@ describe("ExerciseTwoComponent", () => {
 
   // 4. Enable Submit Button when Form is Complete
   it("should enable the submit button only when all fields are filled", () => {
-    render(<ExerciseTwoComponent />);
+    render(<ExerciseTwoComponent randomName={mockRandomName} />);
     const submitButton = screen.getByRole("button", { name: /submit/i });
     expect(submitButton).toBeDisabled();
 
@@ -69,7 +71,7 @@ describe("ExerciseTwoComponent", () => {
 
   // 5. Form Submission Adds New Item to List
   it("should add a new entry to the list upon form submission", () => {
-    render(<ExerciseTwoComponent />);
+    render(<ExerciseTwoComponent randomName={mockRandomName} />);
 
     // Fill out the form
     fireEvent.change(screen.getByLabelText(/your name/i), {
@@ -94,9 +96,16 @@ describe("ExerciseTwoComponent", () => {
 
   // 6. Check Back Link Navigation
   it("should display a link to navigate back to the home page", () => {
-    render(<ExerciseTwoComponent />);
+    render(<ExerciseTwoComponent randomName={mockRandomName} />);
     const backLink = screen.getByRole("link", { name: /back to home/i });
     expect(backLink).toBeInTheDocument();
     expect(backLink).toHaveAttribute("href", "/");
+  });
+
+  // 7. Write a test to check the prop passed in displays a welcome message + the name
+  it("should display a link to navigate back to the home page", () => {
+    render(<ExerciseTwoComponent randomName={mockRandomName} />);
+    const backLink = screen.getByText(/Ms Elizabeth Gray/);
+    expect(backLink).toBeInTheDocument();
   });
 });
