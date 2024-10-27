@@ -1,9 +1,9 @@
-import ExerciseOneTest from "@/components/ExerciseOne/ExerciseOneTest";
+import ExerciseOneComponent from "@/components/ExerciseOne/ExerciseOneComponent";
 
 const ExerciseOne = () => {
   return (
     <>
-      <ExerciseOneTest />
+      <ExerciseOneComponent />
     </>
   );
 };

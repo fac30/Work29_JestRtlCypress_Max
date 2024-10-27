@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ExerciseOneTest = () => {
+const ExerciseOneComponent = () => {
   return (
     <div className="container">
       <h1 className="title">Exercise One</h1>
@@ -22,4 +22,4 @@ const ExerciseOneTest = () => {
   );
 };
 
-export default ExerciseOneTest;
+export default ExerciseOneComponent;
