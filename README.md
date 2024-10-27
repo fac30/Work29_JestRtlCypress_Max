@@ -12,6 +12,11 @@ Navigate to the Project Directory
 cd fac-testing-workshop-2024
 ```
 
+Open in text editor
+```
+code .
+```
+
 ## 🤔 Do you have yarn installed?
 Check if you have yarn installed
 ```
@@ -19,7 +24,7 @@ yarn --version
 ```
 
 ### ✖️ No
-*  If `yarn --version` command threw an error, and shows you don't have yarn installed - go to `Do you have npm installed`?
+*  If `yarn --version` command threw an error, and shows you don't have yarn installed - go to [Do you have npm installed?](#-do-you-have-npm-installed) ? 
 
 ### ✔️ Yes
 * If `yarn --version` command doesn't throw an error, and shows you have a version of yarn installed - continue with the following steps
@@ -50,7 +55,7 @@ Run Cypress Tests
 yarn cypress:run
 ```
 
-## 🤔 Do you have yarn installed?
+## 🤔 Do you have npm installed?
 Check for npm 
 ```
 npm --version
