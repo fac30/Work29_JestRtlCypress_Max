@@ -17,7 +17,7 @@ Open in text editor
 code .
 ```
 
-## 🤔 Do you have yarn installed?
+## Do you have yarn installed?
 Check if you have yarn installed
 ```
 yarn --version
@@ -39,7 +39,7 @@ Run development server
 yarn dev
 ```
 
-Run jest tests
+Run Jest tests
 ```
 yarn test
 ```
@@ -55,7 +55,7 @@ Run Cypress Tests
 yarn run cypress
 ```
 
-## 🤔 Do you have npm installed?
+## Do you have npm installed?
 Check for npm 
 ```
 npm --version
@@ -71,7 +71,7 @@ Run development server
 npm run dev
 ```
 
-Run jest tests
+Run Jest tests
 ```
 npm test
 ```
@@ -106,7 +106,7 @@ yarn dev
 npm run dev
 ```
 
-Run jest tests
+Run Jest tests
 ```
 yarn test
 # or
