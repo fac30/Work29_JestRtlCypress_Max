@@ -1,5 +1,5 @@
 import Home from "../app/page";
-import render from "../test-utils/index";
+import render from "../test-utils/render/index";
 import { screen } from "@testing-library/react";
 
 test("renders a welcome message", () => {
