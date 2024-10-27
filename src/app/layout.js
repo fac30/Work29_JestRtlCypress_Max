@@ -1,3 +1,5 @@
+"use client";
+
 import localFont from "next/font/local";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
@@ -12,11 +14,6 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
-export const metadata = {
-  title: "FAC testing workshop",
-  description: "Example environment to practice writing tests",
-};
 
 export default function RootLayout({ children }) {
   return (

@@ -1,3 +1,4 @@
+// This function calculates the final price of an item after applying a discount and adding tax
 export function calculateFinalPrice(
   originalPrice,
   discountPercent,
