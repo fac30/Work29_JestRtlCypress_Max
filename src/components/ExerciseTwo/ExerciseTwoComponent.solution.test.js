@@ -103,9 +103,9 @@ describe("ExerciseTwoComponent", () => {
   });
 
   // 7. Write a test to check the prop passed in displays a welcome message + the name
-  it("should display a link to navigate back to the home page", () => {
+  it("should display randomName from prop", () => {
     render(<ExerciseTwoComponent randomName={mockRandomName} />);
-    const backLink = screen.getByText(/Ms Elizabeth Gray/);
-    expect(backLink).toBeInTheDocument();
+    const randomName = screen.getByText(/Ms Elizabeth Gray/);
+    expect(randomName).toBeInTheDocument();
   });
 });
