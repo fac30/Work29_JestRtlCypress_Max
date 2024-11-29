@@ -106,10 +106,9 @@ it("should return the square of a positive number", () => {
 it("should return the square of a negative number", () => {
   // Arrange
   const a = -3;
-  const b = 2;
 
   // Act
-  const result = square(a, b);
+  const result = square(a);
 
   // Assert
   expect(result).toEqual(9);
