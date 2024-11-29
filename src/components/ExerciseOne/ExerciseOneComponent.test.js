@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import ExerciseOneComponent from "./ExerciseOneComponent";
 
 // Write tests for the following
@@ -17,5 +17,14 @@ describe("ExerciseOneComponent", () => {
     // Link to docs -> https://testing-library.com/docs/react-testing-library/api/#render
 
     render(<ExerciseOneComponent />);
+    const title = screen.getByRole("heading", { level: 1 });
+    expect(title).toBeInTheDocument();
+  });
+  it("should contain correct text content", () => {
+    render(<ExerciseOneComponent />);
+    const text = screen.getByText(
+      "This is a simple UI exercise page to test navigation and button presence."
+    );
+    expect(text).toBeInTheDocument();
   });
 });
